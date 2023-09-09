@@ -1,140 +1,73 @@
-document.getElementById("showEnglish").addEventListener("click", function () {
-    document.getElementById("englishContent").style.display = "block";
-    document.getElementById("chineseContent").style.display = "none";
-});
+const Eng = document.getElementById("englishContent")
+const Chn = document.getElementById("chineseContent")
 
-document.getElementById("showChinese").addEventListener("click", function () {
-    document.getElementById("englishContent").style.display = "none";
-    document.getElementById("chineseContent").style.display = "block";
-});
+function showE(){
+    Eng.style.display = "block"
+    Chn.style.display = "none"
+}
 
-var markdown = $(".markdown-body");
-function smoothHashScroll() {
-    var hashElements = $("a[href^='#']").toArray();
-    for (var i = 0; i < hashElements.length; i++) {
-        var element = hashElements[i];
-        var $element = $(element);
-        var hash = element.hash;
-        if (hash) {
-            $element.on('click', function (e) {
-                var hash = this.hash;
-                if ($(hash).length <= 0) return;
-                e.preventDefault();
-                $('body, html').stop(true, true).animate({
-                    scrollTop: $(hash).offset().top
-                }, 100, "linear", function () {
-                    window.location.hash = hash;
-                });
-            });
+function showC(){
+    Chn.style.display = "block"
+    Eng.style.display = "none"
+}
+
+function readTxtFile() {
+const fileContentDiv = document.getElementById('englishContent');
+const txtFileName = `problem/${probnum}.txt`; 
+const title_ = document.getElementById('title');
+const link_ = document.getElementById('link');
+ 
+fetch(txtFileName)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('無法讀取檔案');
         }
-    }
-}
+        return response.text();
+    })
+    .then(fileContent => {
+        console.log("444")
+        let parts = fileContent.split('///////////////////////////////////////');
 
-smoothHashScroll();
-var toc = $('.ui-toc');
-var tocAffix = $('.ui-affix-toc');
-var tocDropdown = $('.ui-toc-dropdown');
-tocDropdown.click(function (e) {
-    e.stopPropagation();
-});
+        let title = parts[0];
+        let englishText = replacePreWithBlockquote(parts[1]);
+        let chineseText = replacePreWithBlockquote(parts[2]);
+        Eng.innerHTML = englishText;
+        Chn.innerHTML = chineseText;
+        document.title = title;
+        title_.innerHTML = `<span>[leetcode] ${title}</span>`
+        link_.href = `https://leetcode.com/problems/${convertToSlug(title)}/`
+    })
+    .catch(error => {
+        console.log("error")
+        const body_ = document.getElementsByName("body")
+        body_.innerHTML = `<p4>題目尚未翻譯</p4>`
 
-var enoughForAffixToc = true;
-
-function generateScrollspy() {
-    $(document.body).scrollspy({
-        target: ''
     });
-    $(document.body).scrollspy('refresh');
-    if (enoughForAffixToc) {
-        toc.hide();
-        tocAffix.show();
-    } else {
-        tocAffix.hide();
-        toc.show();
-    }
-    $(document.body).scroll();
 }
 
-function windowResize() {
-    var paddingRight = parseFloat(markdown.css('padding-right'));
-    var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
-    toc.css('right', right + 'px');
-    var newbool;
-    var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
-    if (rightMargin >= 133) {
-        newbool = true;
-        var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
-        var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
-        tocAffix.css('left', left + 'px');
-    } else {
-        newbool = false;
-    }
-    if (newbool != enoughForAffixToc) {
-        enoughForAffixToc = newbool;
-        generateScrollspy();
-    }
-}
-$(window).resize(function () {
-    windowResize();
-});
-$(document).ready(function () {
-    windowResize();
-    generateScrollspy();
-});
+var urlGet = decodeURIComponent(window.location.search.substring(1)).split("/");
+probnum = (urlGet[0].match(/[0-9]+/g) || [0])[0];
+readTxtFile()
 
-function removeHash() {
-    window.location.hash = '';
+
+function convertToSlug(text) {
+    let withoutNumbersAndDot = text.replace(/^\d+\. /, '');
+    let lowercaseText = withoutNumbersAndDot.toLowerCase();
+    
+    let slug = lowercaseText.replace(' ', '-').trim(); 
+    
+    return slug;
 }
 
-var backtotop = $('.back-to-top');
-var gotobottom = $('.go-to-bottom');
 
-backtotop.click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (scrollToTop)
-        scrollToTop();
-    removeHash();
-});
-gotobottom.click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (scrollToBottom)
-        scrollToBottom();
-    removeHash();
-});
-
-var toggle = $('.expand-toggle');
-var tocExpand = false;
-
-checkExpandToggle();
-toggle.click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    tocExpand = !tocExpand;
-    checkExpandToggle();
-})
-
-function checkExpandToggle () {
-    var toc = $('.ui-toc-dropdown .toc');
-    var toggle = $('.expand-toggle');
-    if (!tocExpand) {
-        toc.removeClass('expand');
-        toggle.text('Expand all');
-    } else {
-        toc.addClass('expand');
-        toggle.text('Collapse all');
-    }
+function replacePreWithBlockquote(htmlText) {
+let replacedText = htmlText.replace(/pre/g, 'blockquote');
+    replacedText = replacedText.replace(/Output:/g,'<br>Output:');
+    replacedText = replacedText.replace(/Explanation:/g,'<br>Explanation:');
+    replacedText = replacedText.replace(/輸出：/g,'<br>輸出： ');
+    replacedText = replacedText.replace(/解釋：/g,'<br>解釋：');
+    console.log("change")
+    return replacedText;
 }
 
-function scrollToTop() {
-    $('body, html').stop(true, true).animate({
-        scrollTop: 0
-    }, 100, "linear");
-}
-
-function scrollToBottom() {
-    $('body, html').stop(true, true).animate({
-        scrollTop: $(document.body)[0].scrollHeight
-    }, 100, "linear");
-}
+console.log("888")
