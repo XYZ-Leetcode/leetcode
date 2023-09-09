@@ -6,6 +6,7 @@ function showE(){
     Chn.style.display = "none"
 }
 
+
 function showC(){
     Chn.style.display = "block"
     Eng.style.display = "none"
