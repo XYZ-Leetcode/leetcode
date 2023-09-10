@@ -71,6 +71,5 @@ let replacedText = htmlText.replace(/pre/g, 'blockquote');
 
 function openleetcode(){
             window.open(url);
-    console.log("click")
 }
 
