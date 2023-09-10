@@ -30,10 +30,12 @@ Y   I   R
 <strong>Output:</strong> "PINALSIGYAHRPI"
 <strong>Explanation:</strong><br>
 
-P   &nbsp  I  &nbsp  N<br>
-A &nbsp  L S  I G<br>
-Y A  &nbsp H R<br>
-P  &nbsp   I<br>
+<PRE>
+P     I    N
+A   L S  I G
+Y A   H R
+P     I
+</PRE>
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
