@@ -40,9 +40,9 @@ fetch(txtFileName)
     })
     .catch(error => {
         console.log("error")
-        const body_ = document.getElementsByName("body")
-        body_.innerHTML = `<p4>題目尚未翻譯</p4>`
+        Chn.innerHTML = `<span style="color : red">尚未翻譯或錯誤</span><br><span style="color : red">"https://xyz-leetcode.github.io/leetcode/?題號"查看中文翻譯</span>`
 
+        Eng.innerHTML = `<span style="color : red">尚未翻譯或錯誤</span><br><span style="color : red">"https://xyz-leetcode.github.io/leetcode/?題號"查看中文翻譯</span>`
     });
 }
 
