@@ -1,6 +1,6 @@
 5. Longest Palindromic Substring
 ///////////////////////////////////////
-<div class="xFUwe" data-track-load="description_content"><p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword="palindromic-string" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:rp:"><div><em>palindromic</em></div></div><div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(284px, 220px);"></div></div></div></span> <span data-keyword="substring-nonempty" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:rr:"><div><em>substring</em></div></div><div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(351px, 220px);"></div></div></div></span> in <code>s</code>.</p>
+<div class="xFUwe" data-track-load="description_content"><p>Given a string <code>s</code>, return <em>the longest</em><em>palindromic</em><em>substring</em> in <code>s</code>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
@@ -26,7 +26,7 @@
 </div>
 ///////////////////////////////////////
 <div class="xFUwe" data-track-load="description_content">
-    <p>給定一個字串 <code>s</code>，返回其中<em>最長</em><span data-keyword="palindromic-string" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:rp:"><div><em>回文</em></div></div><div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(284px, 220px);"></div></div></div></span><span data-keyword="substring-nonempty" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:rr:"><div><em>子字串</em></div></div><div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(351px, 220px);"></div></div></div></span>。</p>
+    <p>給定一個字串 <code>s</code>，返回其中<em>最長</em><<em>回文</em><em>子字串</em>。</p>
 
     <p>&nbsp;</p>
     <p><strong class="example">範例 1：</strong></p>
