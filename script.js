@@ -54,10 +54,11 @@ function convertToSlug(text) {
     let withoutNumbersAndDot = text.replace(/^\d+\. /, '');
     let lowercaseText = withoutNumbersAndDot.toLowerCase();
     
-    let slug = lowercaseText.replace(' ', '-').trim(); 
+    let slug = encodeURIComponent(lowercaseText.replace(' ', '-').trim()); 
     
     return slug;
 }
+
 
 
 function replacePreWithBlockquote(htmlText) {
