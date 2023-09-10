@@ -1,6 +1,6 @@
 3. Longest Substring Without Repeating Characters
 ///////////////////////////////////////
-<div class="xFUwe" data-track-load="description_content"><p>Given a string <code>s</code>, find the length of the <strong>longest</strong> <span data-keyword="substring-nonempty" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:rs4:"><div><strong>substring</strong></div></div><div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(355px, -365px);"></div></div></div></span> without repeating characters.</p>
+<div class="xFUwe" data-track-load="description_content"><p>Given a string <code>s</code>, find the length of the <strong>longest</strong><strong>substring</strong> without repeating characters.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
@@ -35,7 +35,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 ///////////////////////////////////////
 
 <div class="xFUwe" data-track-load="description_content">
-    <p>給定一個字符串 <code>s</code>，找到最長的不重複字符的<span data-keyword="substring-nonempty" class=" cursor-pointer relative text-dark-blue-s text-sm"><div class="popover-wrapper inline-block" data-headlessui-state=""><div><div aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:rs4:"><div><strong>子字串</strong></div></div><div style="position: fixed; z-index: 40; inset: 0px auto auto 0px; transform: translate(355px, -365px);"></div></div></div></span>的長度。</p>
+    <p>給定一個字符串 <code>s</code>，找到最長的不重複字符的<strong>子字串</strong>的長度。</p>
 
     <p>&nbsp;</p>
     <p><strong class="example">範例 1：</strong></p>
