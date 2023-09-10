@@ -1,6 +1,6 @@
 5. Longest Palindromic Substring
 ///////////////////////////////////////
-<div class="xFUwe" data-track-load="description_content"><p>Given a string <code>s</code>, return <em>the longest</em><em>palindromic</em><em>substring</em> in <code>s</code>.</p>
+<div class="xFUwe" data-track-load="description_content"><p>Given a string <code>s</code>, return <em>the longest</em><em> palindromic</em><em>substring</em> in <code>s</code>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
@@ -26,7 +26,7 @@
 </div>
 ///////////////////////////////////////
 <div class="xFUwe" data-track-load="description_content">
-    <p>給定一個字串 <code>s</code>，返回其中<em>最長</em><<em>回文</em><em>子字串</em>。</p>
+    <p>給定一個字串 <code>s</code>，返回其中<em>最長</em><em>回文</em><em>子字串</em>。</p>
 
     <p>&nbsp;</p>
     <p><strong class="example">範例 1：</strong></p>
