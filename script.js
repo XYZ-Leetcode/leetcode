@@ -54,7 +54,7 @@ function convertToSlug(text) {
     let withoutNumbersAndDot = text.replace(/^\d+\. /, '');
     let lowercaseText = withoutNumbersAndDot.toLowerCase();
     
-    let slug = encodeURIComponent(lowercaseText.replace(/ /g, '-').trim()); 
+    let slug = lowercaseText.replace(/ /g, '-').trim(); 
     
     return slug;
 }
