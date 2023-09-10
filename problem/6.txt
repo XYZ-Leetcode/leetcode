@@ -3,7 +3,7 @@
 <div class="xFUwe" data-track-load="description_content"><p>The string <code>"PAYPALISHIRING"</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
 <pre>
 P&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;N <br>
-A&nbsp;P&nbsp;L&nbsp;S&nbsp;I&nbsp;I&nbsp;G <br>
+A&nbsp;P&nbsp;L&nbsp;S&nbsp; I &nbsp; I &nbsp;G <br>
 Y&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;R <br>
 
 </pre>
