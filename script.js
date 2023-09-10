@@ -26,7 +26,6 @@ fetch(txtFileName)
         return response.text();
     })
     .then(fileContent => {
-        console.log("444")
         let parts = fileContent.split('///////////////////////////////////////');
 
         let title = parts[0];
@@ -67,8 +66,6 @@ let replacedText = htmlText.replace(/pre/g, 'blockquote');
     replacedText = replacedText.replace(/Explanation:/g,'<br>Explanation:');
     replacedText = replacedText.replace(/輸出：/g,'<br>輸出： ');
     replacedText = replacedText.replace(/解釋：/g,'<br>解釋：');
-    console.log("change")
     return replacedText;
 }
 
-console.log("888")
