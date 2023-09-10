@@ -6,7 +6,7 @@
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg" style="width: 483px; height: 342px;">
+<img alt="" src="https://raw.githubusercontent.com/XYZ-Leetcode/leetcode/main/phote/addtwonumber1.jpg" style="width: 483px; height: 342px;">
 <pre><strong>Input:</strong> l1 = [2,4,3], l2 = [5,6,4]
 <strong>Output:</strong> [7,0,8]
 <strong>Explanation:</strong> 342 + 465 = 807.
@@ -37,11 +37,11 @@
 <div class="xFUwe" data-track-load="description_content">
     <p>給定兩個<strong>非空</strong>鏈結串列，代表兩個非負整數。數字以<strong>相反的順序</strong>存儲，每個節點包含一個個位數字。將這兩個數相加，並將結果返回為一個鏈結串列。</p>
 
-    <p>您可以假設這兩個數字除了數字 0 本身之外，不包含前導零。</p>
+    <p>您可以假設這兩個數字除了數字 0 本身之外，不包含開頭為0。</p>
 
     <p>&nbsp;</p>
     <p><strong class="example">範例 1：</strong></p>
-    <img alt="" src="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg" style="width: 483px; height: 342px;">
+    <img alt="" src="https://raw.githubusercontent.com/XYZ-Leetcode/leetcode/main/phote/addtwonumber1.jpg" style="width: 483px; height: 342px;">
     <pre><strong>輸入：</strong> l1 = [2,4,3], l2 = [5,6,4]
 <strong>輸出：</strong> [7,0,8]
 <strong>說明：</strong> 342 + 465 = 807。
