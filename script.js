@@ -70,5 +70,6 @@ let replacedText = htmlText.replace(/pre/g, 'blockquote');
 
 function openleetcode(){
             window.open(`https://leetcode.com/problems/${convertToSlug(title)}/`);
+    console.log("click")
 }
 
