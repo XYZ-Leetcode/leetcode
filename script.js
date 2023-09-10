@@ -40,7 +40,7 @@ fetch(txtFileName)
     })
     .catch(error => {
         console.log("error")
-        Chn.innerHTML = `<span style="color : red">尚未翻譯或錯誤</span><br><span style="color : red">"https://xyz-leetcode.github.io/leetcode/?題號"查看中文翻譯</span>`
+        Chn.innerHTML = `<span style="color : red">尚未翻譯或錯誤</span><br><span style="color : red">"https://xyz-leetcode.github.io/leetcode/?<span style ="color:blue">題號</span>"查看中文翻譯</span>`
 
         Eng.innerHTML = `<span style="color : red">尚未翻譯或錯誤</span><br><span style="color : red">"https://xyz-leetcode.github.io/leetcode/?題號"查看中文翻譯</span>`
     });
