@@ -1,6 +1,6 @@
 const Eng = document.getElementById("englishContent")
 const Chn = document.getElementById("chineseContent")
-
+var url
 function showE(){
     Eng.style.display = "block"
     Chn.style.display = "none"
@@ -34,6 +34,7 @@ fetch(txtFileName)
         Chn.innerHTML = chineseText;
         document.title = title;
         title_.innerHTML = `<span>[leetcode] ${title}</span>`
+        url = `https://leetcode.com/problems/${convertToSlug(title)}/`
     })
     .catch(error => {
         console.log("error")
@@ -69,7 +70,7 @@ let replacedText = htmlText.replace(/pre/g, 'blockquote');
 }
 
 function openleetcode(){
-            window.open(`https://leetcode.com/problems/${convertToSlug(title)}/`);
+            window.open(url);
     console.log("click")
 }
 
