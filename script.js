@@ -16,7 +16,6 @@ function readTxtFile() {
 const fileContentDiv = document.getElementById('englishContent');
 const txtFileName = `problem/${probnum}.txt`; 
 const title_ = document.getElementById('title');
-const link_ = document.getElementById('link');
  
 fetch(txtFileName)
     .then(response => {
@@ -35,7 +34,6 @@ fetch(txtFileName)
         Chn.innerHTML = chineseText;
         document.title = title;
         title_.innerHTML = `<span>[leetcode] ${title}</span>`
-        link_.href = `https://leetcode.com/problems/${convertToSlug(title)}/`
     })
     .catch(error => {
         console.log("error")
