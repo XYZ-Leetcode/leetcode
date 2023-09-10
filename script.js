@@ -69,6 +69,6 @@ let replacedText = htmlText.replace(/pre/g, 'blockquote');
 }
 
 function openleetcode(){
-            window.open(`https://leetcode.com/problems/${convertToSlug(title)}/`, '_blank');
+            window.open(`https://leetcode.com/problems/${convertToSlug(title)}/`);
 }
 
