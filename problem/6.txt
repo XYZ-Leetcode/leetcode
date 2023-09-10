@@ -1,13 +1,13 @@
 6. Zigzag Conversion
 ///////////////////////////////////////
 <div class="xFUwe" data-track-load="description_content"><p>The string <code>"PAYPALISHIRING"</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
+<pre>
 <PRE>
 P   A   H   N
 A P L S I I G
 Y   I   R
-
 </PRE>
-
+</pre>
 
 
 <p>And then read line by line: <code>"PAHNAPLSIIGYIR"</code></p>
