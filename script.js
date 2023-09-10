@@ -50,13 +50,14 @@ readTxtFile()
 
 
 function convertToSlug(text) {
-    let withoutNumbersAndDot = text.replace(/^\d+\. /, '');
-    let lowercaseText = withoutNumbersAndDot.toLowerCase();
+    let withoutNumbersAndDot = text.replace(/^\d+\. /, '').replace(/[^\w\s-]/g, '');
     
+    let lowercaseText = withoutNumbersAndDot.toLowerCase();
     let slug = lowercaseText.replace(/ /g, '-').trim(); 
     
     return slug;
 }
+
 
 
 
