@@ -1,7 +1,6 @@
 6. Zigzag Conversion
 ///////////////////////////////////////
 <div class="xFUwe" data-track-load="description_content"><p>The string <code>"PAYPALISHIRING"</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
-<br>
 <pre>P  &nbsp A &nbsp  H &nbsp  N<br>
 A P L S I I G<br>
 Y  &nbsp I &nbsp  R<br>
@@ -25,7 +24,8 @@ Y  &nbsp I &nbsp  R<br>
 
 <pre><strong>Input:</strong> s = "PAYPALISHIRING", numRows = 4
 <strong>Output:</strong> "PINALSIGYAHRPI"
-<strong>Explanation:</strong>
+<strong>Explanation:</strong><br>
+
 P   &nbsp  I  &nbsp  N<br>
 A &nbsp  L S  I G<br>
 Y A  &nbsp H R<br>
@@ -74,7 +74,8 @@ Y &nbsp  I  &nbsp R<br>
 
     <pre><strong>輸入：</strong> s = "PAYPALISHIRING", numRows = 4
 <strong>輸出：</strong> "PINALSIGYAHRPI"
-<strong>解釋：</strong>
+<strong>解釋：</strong><br>
+
 P   &nbsp  I  &nbsp  N<br>
 A &nbsp  L S  I G<br>
 Y A  &nbsp H R<br>
