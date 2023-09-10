@@ -70,3 +70,7 @@ let replacedText = htmlText.replace(/pre/g, 'blockquote');
     return replacedText;
 }
 
+function openleetcode(){
+            window.open(`https://leetcode.com/problems/${convertToSlug(title)}/`, '_blank');
+}
+
