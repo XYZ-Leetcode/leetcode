@@ -35,7 +35,7 @@
 
 ///////////////////////////////////////
 
-<div class="xFUwe" data-track-load="description_content"><p>給定一個有符號的32位整數 <code>x</code>，返回<code>x</code>的<em>反轉數字</em>。如果反轉<code>x</code>導致值超出有符號32位整數範圍<code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>，則返回<code>0</code>。</p>
+<div class="xFUwe" data-track-load="description_content"><p>給定一個有32位元的整數 <code>x</code>，返回<code>x</code>的<em>反轉數字</em>。如果反轉<code>x</code>導致值超出有符號32位整數範圍<code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>，則返回<code>0</code>。</p>
 
 <p><strong>假設環境不允許您存儲64位整數（有符號或無符號）。</strong></p>
 
