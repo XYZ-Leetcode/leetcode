@@ -35,7 +35,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 ///////////////////////////////////////
 
 <div class="xFUwe" data-track-load="description_content">
-    <p>給定一個字符串 <code>s</code>，找到最長的不重複字符的<strong>子字串</strong>的長度。</p>
+    <p>給定一個字串 <code>s</code>，找到最長的不重複字符的<strong>子字串</strong>的長度。</p>
 
     <p>&nbsp;</p>
     <p><strong class="example">範例 1：</strong></p>
