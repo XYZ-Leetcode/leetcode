@@ -26,10 +26,10 @@ Y  &nbsp I &nbsp  R<br>
 <pre><strong>Input:</strong> s = "PAYPALISHIRING", numRows = 4
 <strong>Output:</strong> "PINALSIGYAHRPI"
 <strong>Explanation:</strong>
-P     I    N<br>
-A   L S  I G<br>
-Y A   H R<br>
-P     I<br>
+P   &nbsp  I  &nbsp  N<br>
+A &nbsp  L S  I G<br>
+Y A  &nbsp H R<br>
+P  &nbsp   I<br>
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
@@ -51,9 +51,9 @@ P     I<br>
 <div class="xFUwe" data-track-load="description_content">
     <p>字串 <code>"PAYPALISHIRING"</code> 是以給定行數的之字形模式寫成的，如下所示：（為了更好的可讀性，您可能希望以等寬字體顯示此模式）</p>
 
-    <pre>P   A   H   N<br>
+    <pre>P &nbsp  A  &nbsp H &nbsp  N<br>
 A P L S I I G<br>
-Y   I   R<br>
+Y &nbsp  I  &nbsp R<br>
 </pre>
 
     <p>然後按行讀取：<code>"PAHNAPLSIIGYIR"</code></p>
@@ -75,10 +75,10 @@ Y   I   R<br>
     <pre><strong>輸入：</strong> s = "PAYPALISHIRING", numRows = 4
 <strong>輸出：</strong> "PINALSIGYAHRPI"
 <strong>解釋：</strong>
-P     I    N<br>
-A   L S  I G<br>
-Y A   H R<br>
-P     I<br>
+P   &nbsp  I  &nbsp  N<br>
+A &nbsp  L S  I G<br>
+Y A  &nbsp H R<br>
+P   &nbsp  I<br>
 </pre>
 
     <p><strong class="example">範例 3：</strong></p>
