@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://raw.githubusercontent.com/XYZ-Leetcode/leetcode/main/sitemap.xml
+Sitemap: https://xyz-leetcode.github.io/leetcode/sitemap.xml
