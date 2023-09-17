@@ -35,6 +35,7 @@ fetch(txtFileName)
         document.title = title;
         title_.innerHTML = `<span>[leetcode] ${title}</span>`
         url = `https://leetcode.com/problems/${convertToSlug(title)}/`
+        document.getElementById("prblink").href = url;
     })
     .catch(error => {
         console.log("error")
@@ -70,7 +71,5 @@ let replacedText = htmlText.replace(/pre/g, 'blockquote');
     return replacedText;
 }
 
-function openleetcode(){
-            window.open(url);
-}
+
 
