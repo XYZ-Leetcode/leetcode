@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>1. Two Sum 中文翻譯+完整詳細解題技巧</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous">
+    <meta name="description" content="Two Sum中文翻譯: 給定一個整數陣列 nums 和一個整數 target，返回兩個數字的索引，使它們的和等於 target。">
+    <meta name="keywords" content="leetcode, 1. Two Sum, 數組, 目標, 索引">
+    <link rel="canonical" href="https://xyz-leetcode.github.io/leetcode/Two-Sum.html">
+</head>
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true">
+        <h1 id="title"><span>[leetcode] 1. Two Sum
+</span></h1>
+
+        
+
+
+        <h>
+           <a target="_blank" id="prblink" href="https://leetcode.com/problems/two-sum/" style="color:#333333;font-weight: normal"> <button style="font-weight: normal color:black" onclick="openleetcode()">題目連結</button></a>
+            <button id="showEnglish" style="font-weight: normal" onclick="showE()">英文原文</button>
+            <button id="showChinese" style="font-weight: normal" onclick="showC()">中文翻譯</button>
+        </h>
+
+        <br><br>
+
+        <div id="englishContent">
+<div class="book-page-fixed_width">
+                              <div id="instructions-close" class="book-close"><i class="fas fa-chevron-left book-close-icon"></i>Hide</div>
+                    <h1 class="book-page-heading">Fibonacci Cycles</h1>
+                                            
+  <div class="problembody">
+    <p>Yraglac loves number sequences. One of his favourites is the
+    classic Fibonacci numbers. He likes to set the base case as
+    <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="0" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>F</mi><mn>0</mn></msub><mo>=</mo><msub><mi>F</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></math></mjx-assistive-mml></mjx-container></span> and
+    <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="1" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>F</mi><mi>n</mi></msub><mo>=</mo><msub><mi>F</mi><mrow data-mjx-texclass="ORD"><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>F</mi><mrow data-mjx-texclass="ORD"><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub></math></mjx-assistive-mml></mjx-container></span>.</p>
+    <p>Now, one can only list out the same numbers so many times
+    before getting bored, so Yraglac came up with a new game: if he
+    took the sequence of Fibonacci numbers modulo some <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="2" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container></span>, what is the index of the first
+    number in the new sequence that gets repeated? Yraglac only
+    considers numbers in the sequence starting from <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="3" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><mn>2</mn></math></mjx-assistive-mml></mjx-container></span> since <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="4" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>F</mi><mn>0</mn></msub><mo>=</mo><msub><mi>F</mi><mn>1</mn></msub></math></mjx-assistive-mml></mjx-container></span> is boring.</p>
+    <p>Can you write a program to help Yraglac find the answer?</p>
+    <h2>Input</h2>
+    <p>The first line contains a single integer <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="5" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>Q</mi><mo>≤</mo><mn>500</mn></math></mjx-assistive-mml></mjx-container></span>, the number of
+    queries to follow.</p>
+    <p>The next <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="6" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi></math></mjx-assistive-mml></mjx-container></span> lines each
+    contain a single integer <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="7" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mstyle><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><mn>1</mn><mstyle scriptlevel="0"><mspace width="0.167em"></mspace></mstyle><mn>000</mn></math></mjx-assistive-mml></mjx-container></span>, the modulo to be used for the query. It
+    is guaranteed that some number in the sequence will be
+    repeated.</p>
+    <h2>Output</h2>
+    <p>For each query, output the <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="8" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container></span> such that <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="9" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>F</mi><mi>n</mi></msub></math></mjx-assistive-mml></mjx-container></span> is the first number in the
+    sequence of Fibonacci numbers modulo <span class="tex2jax_process"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="10" style="font-size: 125.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container></span> that has a repeat at some point in
+    the sequence.</p>
+    <table class="sample" summary="sample data">
+      <tbody><tr>
+        <th>Sample Input 1</th>
+        <th>Sample Output 1</th>
+      </tr>
+      <tr>
+        <td>
+          <pre>3
+4
+13
+22
+</pre>
+        <span class="copy-to-clipboard"></span></td>
+        <td>
+          <pre>4
+5
+8
+</pre>
+        <span class="copy-to-clipboard"></span></td>
+      </tr>
+    </tbody></table>
+  </div>
+
+                                                        </div></div>
+        <div id="chineseContent" style="display: none;">
+<div class="xFUwe" data-track-load="description_content">
+    <p>給定一個整數陣列 <code>nums</code> 和一個整數 <code>target</code>，返回<em>兩個數字的索引，使它們的和等於 <code>target</code></em>。</p>
+
+    <p>您可以假設每個輸入都<stong><em>只有一個解</em>，並且您不可以<em>重複</em>使用相同的元素。</stong></p>
+
+    <p>您可以以任何順序返回答案。</p>
+
+    <p>&nbsp;</p>
+    <p><strong class="example">範例 1：</strong></p>
+
+    <blockquote><strong>輸入：</strong> nums = [2,7,11,15], target = 9
+<strong><br>輸出： </strong> [0,1]
+<strong><br>解釋：</strong> 因為 nums[0] + nums[1] == 9，所以我們返回 [0, 1]。
+</blockquote>
+
+    <p><strong class="example">範例 2：</strong></p>
+
+    <blockquote><strong>輸入：</strong> nums = [3,2,4], target = 6
+<strong><br>輸出： </strong> [1,2]
+</blockquote>
+
+    <p><strong class="example">範例 3：</strong></p>
+
+    <blockquote><strong>輸入：</strong> nums = [3,3], target = 6
+<strong><br>輸出： </strong> [0,1]
+</blockquote>
+
+    <p>&nbsp;</p>
+    <p><strong>限制：</strong></p>
+
+    <ul>
+        <li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+        <li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+        <li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>
+        <li><strong>只有一個有效答案存在。</strong></li>
+    </ul>
+
+    <p>&nbsp;</p>
+    <strong>進階問題：</strong> 您能否提供一個時間複雜度小於<code>O(n<sup>2</sup>)</code>的算法？</div>
+</div>
+<h6>解題技巧待更新</h6>
+    </div>
+    <script>
+const Eng = document.getElementById("englishContent")
+const Chn = document.getElementById("chineseContent")
+function showE(){
+    Eng.style.display = "block"
+    Chn.style.display = "none"
+}
+
+
+function showC(){
+    Chn.style.display = "block"
+    Eng.style.display = "none"
+}
+
+    </script>
+
+
+</body></html>
